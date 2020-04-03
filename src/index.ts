@@ -13,6 +13,16 @@ export const invocationConfig: IntegrationInvocationConfig = {
       mask: false,
     },
   },
-  executionHandler,
   invocationValidator,
+  integrationStepPhases: [
+    {
+      steps: [
+        {
+          id: "synchronize",
+          name: "Synchronize",
+          executionHandler,
+        },
+      ],
+    },
+  ],
 };
