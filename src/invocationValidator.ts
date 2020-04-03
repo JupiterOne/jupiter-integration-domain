@@ -22,7 +22,7 @@ import { getDomainListFromConfigParam } from "./util/getDomainListFromConfigPara
  */
 export default async function invocationValidator(
   context: IntegrationValidationContext,
-) {
+): Promise<void> {
   const {
     instance: { config },
   } = context;
@@ -38,8 +38,10 @@ export default async function invocationValidator(
   for (const domain of domains) {
     if (!isValidDomain(domain)) {
       throw new IntegrationInstanceConfigError(
-        "config.domain must contain all valid domains separated by commas",
+        `Invalid domain name ${domain}`,
       );
     }
   }
+
+  return Promise.resolve();
 }

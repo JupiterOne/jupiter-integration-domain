@@ -1,6 +1,16 @@
 import invocationValidator from "./invocationValidator";
 
-test("should allow with valid domains", async () => {
+test("should allow with valid domains as an array", async () => {
+  await invocationValidator({
+    instance: {
+      config: {
+        domains: ["test.com ", "test1.com"],
+      },
+    },
+  } as any);
+});
+
+test("should allow with valid domains as a string", async () => {
   await invocationValidator({
     instance: {
       config: {
@@ -40,7 +50,7 @@ test("should throw if a domain is invalid", async () => {
       },
     } as any),
   ).rejects.toThrowError(
-    "config.domain must contain all valid domains separated by commas",
+    "Invalid domain name INVALID_HERE",
   );
 });
 
