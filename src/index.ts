@@ -3,7 +3,7 @@ import { IntegrationInvocationConfig } from "@jupiterone/jupiter-managed-integra
 import executionHandler from "./executionHandler";
 import invocationValidator from "./invocationValidator";
 
-const invocationConfig: IntegrationInvocationConfig = {
+export const invocationConfig: IntegrationInvocationConfig = {
   instanceConfigFields: {
     /**
      * Comma separated list of domains (e.g. google.com,apple.com)
@@ -16,5 +16,3 @@ const invocationConfig: IntegrationInvocationConfig = {
   executionHandler,
   invocationValidator,
 };
-
-export default invocationConfig;
