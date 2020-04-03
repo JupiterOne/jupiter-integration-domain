@@ -1,8 +1,8 @@
-# jupiter-integration-domain
+# graph-internet-domain
 
 ## Overview
 
-A JupiterOne integration that ingests domain information.
+A JupiterOne integration that ingests domain information from Whois service.
 
 ## Integration Instance Configuration
 
@@ -22,4 +22,4 @@ The following entity resources are ingested when the integration runs:
 
 | Entity Resource | \_type : \_class of the Entity                |
 | ----------------------- | ------------------------------------- |
-| Domain                  | `domain` : `Domain`                   |
+| Domain                  | `internet_domain` : `Domain`          |
