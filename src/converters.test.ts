@@ -15,7 +15,7 @@ test("createDomainEntity", () => {
 
   const expectedDomainEntity: DomainEntity = {
     _class: DOMAIN_ENTITY_CLASS,
-    _key: `domain_${domainName}`,
+    _key: `internet_domain_${domainName}`,
     _type: DOMAIN_ENTITY_TYPE,
     name: domainName,
     displayName: domainName,

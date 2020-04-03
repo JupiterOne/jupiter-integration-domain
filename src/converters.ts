@@ -5,7 +5,7 @@ import getTime from "./util/getTime";
 
 export function createDomainEntity(domain: Domain): DomainEntity {
   return {
-    _key: `domain_${domain.name}`,
+    _key: `internet_domain_${domain.name}`,
     _type: DOMAIN_ENTITY_TYPE,
     _class: DOMAIN_ENTITY_CLASS,
     name: domain.name,
