@@ -37,9 +37,7 @@ export default async function invocationValidator(
 
   for (const domain of domains) {
     if (!isValidDomain(domain)) {
-      throw new IntegrationInstanceConfigError(
-        `Invalid domain name ${domain}`,
-      );
+      throw new IntegrationInstanceConfigError(`Invalid domain name ${domain}`);
     }
   }
 

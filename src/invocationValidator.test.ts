@@ -49,9 +49,7 @@ test("should throw if a domain is invalid", async () => {
         },
       },
     } as any),
-  ).rejects.toThrowError(
-    "Invalid domain name INVALID_HERE",
-  );
+  ).rejects.toThrowError("Invalid domain name INVALID_HERE");
 });
 
 test("should throw if domain config is not provided", async () => {
