@@ -1,5 +1,5 @@
 {
-  "include": ["src/**/*", "tools/**/*", "test/**/*", "typings/**/*"],
+  "include": ["src/**/*", "tools/**/*", "tests/**/*", "typings/**/*"],
   "compilerOptions": {
     "outDir": "build",
     "noUnusedLocals": true,

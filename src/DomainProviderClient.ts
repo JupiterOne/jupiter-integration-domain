@@ -1,23 +1,8 @@
 import { retry } from "@lifeomic/attempt";
-import whois from "whois-api";
+import whois, { WhoisLookupDomain } from "whois-api";
 
-export interface Domain {
+export interface Domain extends WhoisLookupDomain {
   name: string;
-  updatedDate: string;
-  creationDate: string;
-  expirationDate: string;
-}
-
-export interface User {
-  id: string;
-  firstName: string;
-  lastName: string;
-}
-
-export interface Device {
-  id: string;
-  manufacturer: string;
-  ownerId: string;
 }
 
 export default class DomainProviderClient {
@@ -30,11 +15,9 @@ export default class DomainProviderClient {
               return reject(err);
             }
 
-            resolve({
-              name: domainName,
-              updatedDate: result.updated_date,
-              creationDate: result.creation_date,
-              expirationDate: result.expiration_date,
+            resolve({ 
+              ...result,
+              name: domainName
             });
           });
         });
