@@ -2,8 +2,8 @@ import { retry } from "@lifeomic/attempt";
 import whois, { WhoisLookupDomain } from "whois-api";
 import { domainProperties } from "./constants";
 
-test("should fetching domain information", async () => {
-  const domainName = 'jupiterone.com';
+test.skip("should fetching domain information", async () => {
+  const domainName = "jupiterone.com";
   const result = await retry<WhoisLookupDomain>(
     () => {
       return new Promise<WhoisLookupDomain>((resolve, reject) => {

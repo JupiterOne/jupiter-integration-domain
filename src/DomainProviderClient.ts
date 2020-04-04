@@ -15,9 +15,9 @@ export default class DomainProviderClient {
               return reject(err);
             }
 
-            resolve({ 
+            resolve({
               ...result,
-              name: domainName
+              name: domainName,
             });
           });
         });

@@ -14,7 +14,7 @@ declare module "whois-api" {
       technical: object;
       admin: object;
       billing: object;
-    }
+    };
   }
 
   export function lookup(

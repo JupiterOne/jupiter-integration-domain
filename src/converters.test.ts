@@ -16,20 +16,20 @@ test("createDomainEntity", () => {
     _class: DOMAIN_ENTITY_CLASS,
     _key: `internet_domain_${domainName}`,
     _type: DOMAIN_ENTITY_TYPE,
-    _rawData: [{ name: 'default', rawData: domain }],
+    _rawData: [{ name: "default", rawData: domain }],
     name: domainName,
     displayName: domainName,
     domainName,
     expiresOn: getTime(domain.expiration_date),
     updatedOn: getTime(domain.updated_date),
     createdOn: getTime(domain.creation_date),
-    id: '2331770392_DOMAIN_COM-VRSN',
-    whoisServer: 'whois.godaddy.com',
-    registrar: 'GoDaddy.com, LLC',
-    contactEmails: 'abuse@godaddy.com',
+    id: "2331770392_DOMAIN_COM-VRSN",
+    whoisServer: "whois.godaddy.com",
+    registrar: "GoDaddy.com, LLC",
+    contactEmails: "abuse@godaddy.com",
     status:
-      'clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited',
-    nameservers: 'NS14.DOMAINCONTROL.COM',
+      "clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited",
+    nameservers: "NS14.DOMAINCONTROL.COM",
   };
 
   expect(createDomainEntity(domain)).toEqual(expectedDomainEntity);

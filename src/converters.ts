@@ -8,7 +8,7 @@ export function createDomainEntity(domain: Domain): DomainEntity {
     _key: `internet_domain_${domain.name}`,
     _type: DOMAIN_ENTITY_TYPE,
     _class: DOMAIN_ENTITY_CLASS,
-    _rawData: [{ name: 'default', rawData: domain }],
+    _rawData: [{ name: "default", rawData: domain }],
     id: domain.id,
     name: domain.name,
     displayName: domain.name,
