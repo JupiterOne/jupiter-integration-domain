@@ -1,5 +1,6 @@
 import whois, { WhoisLookupDomain } from "whois-api";
 import DomainProviderClient, { Domain } from "./DomainProviderClient";
+import createMockIntegrationLogger from "../test/util/createMockIntegrationLogger";
 
 jest.mock("whois-api");
 
@@ -10,14 +11,18 @@ const mockWhois = whois as jest.Mocked<{
   ) => void;
 }>;
 
+let client: DomainProviderClient;
+
+beforeEach(() => {
+  client = new DomainProviderClient(createMockIntegrationLogger());
+});
+
 afterEach(() => {
   jest.resetAllMocks();
 });
 
 describe("fetchDomainDetails", () => {
   test("should allow fetching domain information", async () => {
-    const client = new DomainProviderClient();
-
     mockWhois.lookup.mockImplementationOnce((domain, cb) => {
       cb(null, {
         updated_date: "2019-09-09T15:39:04Z",
@@ -39,8 +44,6 @@ describe("fetchDomainDetails", () => {
   });
 
   test("should retry when domain detail fetching fails", async () => {
-    const client = new DomainProviderClient();
-
     mockWhois.lookup
       .mockImplementationOnce((domain, cb) => {
         cb(new Error("expected error"));
@@ -70,7 +73,6 @@ describe("fetchDomainDetails", () => {
       cb(new Error("expected error"));
     });
 
-    const client = new DomainProviderClient();
     await expect(client.fetchDomainDetails("google.com")).rejects.toThrowError(
       "expected error",
     );
