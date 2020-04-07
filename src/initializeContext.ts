@@ -8,6 +8,6 @@ export default function initializeContext(
   return {
     ...context,
     ...context.clients.getClients(),
-    provider: new DomainProviderClient(),
+    provider: new DomainProviderClient(context.logger),
   };
 }
