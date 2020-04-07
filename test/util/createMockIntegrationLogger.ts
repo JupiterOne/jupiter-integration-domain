@@ -1,6 +1,6 @@
 import { IntegrationLogger } from "@jupiterone/jupiter-managed-integration-sdk";
 
-export default function createMockIntegrationLogger (): IntegrationLogger {
+export default function createMockIntegrationLogger(): IntegrationLogger {
   return {
     trace: jest.fn(),
     debug: jest.fn(),
@@ -8,6 +8,6 @@ export default function createMockIntegrationLogger (): IntegrationLogger {
     warn: jest.fn(),
     error: jest.fn(),
     fatal: jest.fn(),
-    child: jest.fn()
+    child: jest.fn(),
   };
 }

@@ -1,6 +1,6 @@
 import { retry } from "@lifeomic/attempt";
 import whois, { WhoisLookupDomain } from "whois-api";
-import { IntegrationLogger } from '@jupiterone/jupiter-managed-integration-sdk';
+import { IntegrationLogger } from "@jupiterone/jupiter-managed-integration-sdk";
 
 export interface Domain extends WhoisLookupDomain {
   name: string;
@@ -36,15 +36,18 @@ export default class DomainProviderClient {
                 attemptsRemaining: attemptContext.attemptsRemaining,
                 attemptNum: attemptContext.attemptNum,
               },
-              'Error fetching domain details, but it will be retried.'
+              "Error fetching domain details, but it will be retried.",
             );
           } else {
-            this.logger.error({
-              err
-            }, 'Maximum retries exceeded for fetching domain details');
+            this.logger.error(
+              {
+                err,
+              },
+              "Maximum retries exceeded for fetching domain details",
+            );
           }
         },
-      }
+      },
     );
   }
 }
