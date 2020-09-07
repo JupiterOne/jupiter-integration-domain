@@ -1,4 +1,4 @@
-declare module "whois-api" {
+declare module 'whois-api' {
   export interface WhoisLookupDomain {
     id: string;
     updated_date: string;
