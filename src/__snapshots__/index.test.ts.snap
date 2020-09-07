@@ -1,0 +1,158 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createDomainEntity should convert to entity 1`] = `
+Object {
+  "_class": Array [
+    "Domain",
+  ],
+  "_key": "internet_domain_google.com",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "contact": Object {
+          "admin": Object {},
+          "billing": Object {},
+          "registrant": Object {},
+          "technical": Object {},
+        },
+        "creation_date": "1997-09-15T04:00:00Z",
+        "emails": "abusecomplaints@markmonitor.com",
+        "expiration_date": "2028-09-14T04:00:00Z",
+        "id": "2138514_DOMAIN_COM-VRSN",
+        "name": "google.com",
+        "nameservers": "NS4.GOOGLE.COM",
+        "registrar": "MarkMonitor Inc.",
+        "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+        "updated_date": "2019-09-09T15:39:04Z",
+        "whois_server": "whois.markmonitor.com",
+      },
+    },
+  ],
+  "_type": "internet_domain",
+  "active": false,
+  "contactEmails": Array [
+    "abusecomplaints@markmonitor.com",
+  ],
+  "createdOn": 874296000000,
+  "displayName": "google.com",
+  "domainName": "google.com",
+  "expiresOn": 1852516800000,
+  "id": "2138514_DOMAIN_COM-VRSN",
+  "name": "google.com",
+  "nameservers": Array [
+    "NS4.GOOGLE.COM",
+  ],
+  "registrar": "MarkMonitor Inc.",
+  "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+  "updatedOn": 1568043544000,
+  "whoisServer": "whois.markmonitor.com",
+}
+`;
+
+exports[`#fetchDomains should collect data 1`] = `
+Object {
+  "collectedEntities": Array [
+    Object {
+      "_class": Array [
+        "Domain",
+      ],
+      "_key": "internet_domain_facebook.com",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "contact": Object {
+              "admin": Object {},
+              "billing": Object {},
+              "registrant": Object {},
+              "technical": Object {},
+            },
+            "creation_date": "1997-03-29T05:00:00Z",
+            "emails": "abusecomplaints@registrarsafe.com",
+            "expiration_date": "2028-03-30T04:00:00Z",
+            "id": "2320948_DOMAIN_COM-VRSN",
+            "name": "facebook.com",
+            "nameservers": "D.NS.FACEBOOK.COM",
+            "registrar": "RegistrarSafe, LLC",
+            "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+            "updated_date": "2020-03-10T18:53:59Z",
+            "whois_server": "whois.registrarsafe.com",
+          },
+        },
+      ],
+      "_type": "internet_domain",
+      "active": false,
+      "contactEmails": Array [
+        "abusecomplaints@registrarsafe.com",
+      ],
+      "createdOn": 859611600000,
+      "displayName": "facebook.com",
+      "domainName": "facebook.com",
+      "expiresOn": 1838001600000,
+      "id": "2320948_DOMAIN_COM-VRSN",
+      "name": "facebook.com",
+      "nameservers": Array [
+        "D.NS.FACEBOOK.COM",
+      ],
+      "registrar": "RegistrarSafe, LLC",
+      "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+      "updatedOn": 1583866439000,
+      "whoisServer": "whois.registrarsafe.com",
+    },
+    Object {
+      "_class": Array [
+        "Domain",
+      ],
+      "_key": "internet_domain_google.com",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "contact": Object {
+              "admin": Object {},
+              "billing": Object {},
+              "registrant": Object {},
+              "technical": Object {},
+            },
+            "creation_date": "1997-09-15T04:00:00Z",
+            "emails": "abusecomplaints@markmonitor.com",
+            "expiration_date": "2028-09-14T04:00:00Z",
+            "id": "2138514_DOMAIN_COM-VRSN",
+            "name": "google.com",
+            "nameservers": "NS4.GOOGLE.COM",
+            "registrar": "MarkMonitor Inc.",
+            "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+            "updated_date": "2019-09-09T15:39:04Z",
+            "whois_server": "whois.markmonitor.com",
+          },
+        },
+      ],
+      "_type": "internet_domain",
+      "active": false,
+      "contactEmails": Array [
+        "abusecomplaints@markmonitor.com",
+      ],
+      "createdOn": 874296000000,
+      "displayName": "google.com",
+      "domainName": "google.com",
+      "expiresOn": 1852516800000,
+      "id": "2138514_DOMAIN_COM-VRSN",
+      "name": "google.com",
+      "nameservers": Array [
+        "NS4.GOOGLE.COM",
+      ],
+      "registrar": "MarkMonitor Inc.",
+      "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+      "updatedOn": 1568043544000,
+      "whoisServer": "whois.markmonitor.com",
+    },
+  ],
+  "collectedRelationships": Array [],
+  "encounteredTypes": Array [
+    "internet_domain",
+  ],
+  "numCollectedEntities": 2,
+  "numCollectedRelationships": 0,
+}
+`;
