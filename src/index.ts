@@ -97,7 +97,7 @@ export async function validateInvocation(
 export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
   instanceConfigFields: {
     domains: {
-      type: 'array' as any,
+      type: 'string',
       mask: false,
     },
   },
