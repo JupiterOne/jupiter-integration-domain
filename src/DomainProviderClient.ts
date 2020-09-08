@@ -1,9 +1,9 @@
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference
-/// <reference path="./types/whois-api" />
-import whois, { WhoisLookupDomain } from 'whois-api';
 import { retry } from '@lifeomic/attempt';
 import { IntegrationLogger } from '@jupiterone/integration-sdk-core';
 import pMap from 'p-map';
+import { WhoisLookupDomain } from './types';
+
+const whois = require('whois-api');
 
 export interface Domain extends WhoisLookupDomain {
   name: string;

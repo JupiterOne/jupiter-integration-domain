@@ -1,6 +1,8 @@
-import whois, { WhoisLookupDomain } from 'whois-api';
 import DomainProviderClient, { Domain } from './DomainProviderClient';
 import { createMockIntegrationLogger } from '@jupiterone/integration-sdk-testing';
+import { WhoisLookupDomain } from './types';
+
+const whois = require('whois-api');
 
 function getMockDomainProperties() {
   const domainProperties: WhoisLookupDomain = {
@@ -34,7 +36,7 @@ describe('fetchDomainDetails', () => {
   test('should allow fetching domain information', async () => {
     const domainProperties = getMockDomainProperties();
 
-    jest.spyOn(whois, 'lookup').mockImplementationOnce((domain, cb) => {
+    jest.spyOn(whois, 'lookup').mockImplementationOnce((domain, cb: any) => {
       cb(null, domainProperties);
     });
 
@@ -53,13 +55,13 @@ describe('fetchDomainDetails', () => {
 
     jest
       .spyOn(whois, 'lookup')
-      .mockImplementationOnce((domain, cb) => {
+      .mockImplementationOnce((domain, cb: any) => {
         cb(null, domainProperties);
       })
-      .mockImplementationOnce((domain, cb) => {
+      .mockImplementationOnce((domain, cb: any) => {
         cb(null, domainProperties);
       })
-      .mockImplementationOnce((domain, cb) => {
+      .mockImplementationOnce((domain, cb: any) => {
         cb(new Error('should not call 3 times'), null as any);
       });
 
@@ -102,7 +104,7 @@ describe('fetchDomainDetails', () => {
 
     client = new DomainProviderClient(mockLogger);
 
-    jest.spyOn(whois, 'lookup').mockImplementation((domain, cb) => {
+    jest.spyOn(whois, 'lookup').mockImplementation((domain, cb: any) => {
       if (domain === 'facebook.com' || domain === 'google.com') {
         cb(new Error('expected error'), null as any);
       } else {
@@ -154,10 +156,10 @@ describe('fetchDomainDetails', () => {
 
     const domainLookupMock = jest
       .spyOn(whois, 'lookup')
-      .mockImplementationOnce((domain, cb) => {
+      .mockImplementationOnce((domain, cb: any) => {
         cb(new Error('expected error'), null as any);
       })
-      .mockImplementationOnce((domain, cb) => {
+      .mockImplementationOnce((domain, cb: any) => {
         cb(null, domainProperties);
       });
 
@@ -186,7 +188,7 @@ describe('fetchDomainDetails', () => {
   test('should reject if whois lookup rejects max amount of times', async () => {
     const domainLookupMock = jest
       .spyOn(whois, 'lookup')
-      .mockImplementation((domain, cb) => {
+      .mockImplementation((domain, cb: any) => {
         cb(new Error('expected error'), null as any);
       });
 

@@ -1,6 +1,6 @@
 {
   "name": "@jupiterone/graph-whois",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A JupiterOne managed integration for WHOIS data",
   "license": "MPL-2.0",
   "main": "dist/index.js",
@@ -19,7 +19,7 @@
     "type-check": "tsc",
     "test": "jest",
     "test:ci": "yarn lint && yarn type-check && yarn test",
-    "build": "tsc -p tsconfig.dist.json --declaration && cp -R ./src/types dist",
+    "build": "tsc -p tsconfig.dist.json --declaration",
     "prepush": "yarn lint && yarn type-check && jest --changedSince master",
     "prepack": "yarn build"
   },
