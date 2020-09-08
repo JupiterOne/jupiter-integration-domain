@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 0.3.1 - 2020-09-08
+
+### Fixed
+
+- Copy local TypeScript module declarations into `dist`
+
 ## 0.3.0 - 2020-09-07
 
 ### Fixed
