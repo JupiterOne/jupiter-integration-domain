@@ -19,7 +19,7 @@
     "type-check": "tsc",
     "test": "jest",
     "test:ci": "yarn lint && yarn type-check && yarn test",
-    "build": "tsc -p tsconfig.dist.json --declaration",
+    "build": "tsc -p tsconfig.dist.json --declaration && cp -R ./src/types dist",
     "prepush": "yarn lint && yarn type-check && jest --changedSince master",
     "prepack": "yarn build"
   },

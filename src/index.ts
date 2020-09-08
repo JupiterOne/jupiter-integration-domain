@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/triple-slash-reference
+/// <reference path="./types/is-valid-domain" />
+import isValidDomain from 'is-valid-domain';
 import {
   IntegrationInvocationConfig,
   IntegrationConfigLoadError,
@@ -9,7 +12,6 @@ import {
   createIntegrationEntity,
   getTime,
 } from '@jupiterone/integration-sdk-core';
-import isValidDomain from 'is-valid-domain';
 
 export const ENTITY_DOMAIN_CLASS = 'Domain';
 export const ENTITY_DOMAIN_TYPE = 'internet_domain';
