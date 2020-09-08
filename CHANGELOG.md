@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 0.3.2 - 2020-09-08
+
+### Fixed
+
+- Remove custom TypeScript module declarations from project for simplicity
+
 ## 0.3.1 - 2020-09-08
 
 ### Fixed
