@@ -30,7 +30,7 @@ Object {
     },
   ],
   "_type": "internet_domain",
-  "active": false,
+  "active": undefined,
   "contactEmails": Array [
     "abusecomplaints@markmonitor.com",
   ],
@@ -82,7 +82,7 @@ Object {
         },
       ],
       "_type": "internet_domain",
-      "active": false,
+      "active": undefined,
       "contactEmails": Array [
         "abusecomplaints@registrarsafe.com",
       ],
@@ -129,7 +129,7 @@ Object {
         },
       ],
       "_type": "internet_domain",
-      "active": false,
+      "active": undefined,
       "contactEmails": Array [
         "abusecomplaints@markmonitor.com",
       ],
