@@ -1,4 +1,4 @@
-# Whois 
+# Whois
 
 ## Whois + JupiterOne Integration Benefits
 
@@ -8,10 +8,10 @@
 ## How it Works
 
 - JupiterOne periodically fetches domains from Whois to update the graph.
-- Write JupiterOne queries to review and monitor updates to the graph, 
-or leverage existing queries.
-- Configure alerts to take action when the JupiterOne graph changes, 
-or leverage existing alerts.
+- Write JupiterOne queries to review and monitor updates to the graph, or
+  leverage existing queries.
+- Configure alerts to take action when the JupiterOne graph changes, or leverage
+  existing alerts.
 
 ## Requirements
 
@@ -39,14 +39,16 @@ google.com,facebook.com
 1. From the top navigation of the J1 Search homepage, select **Integrations**
 2. Scroll to the **Whois** integration tile and click it.
 3. Click the **Add Configuration** button and configure the following settings:
-- Enter the **Account Name** by which you'd like to identify this Whois
-   account in JupiterOne. Ingested entities will have this value stored in
-   `tag.AccountName` when **Tag with Account Name** is checked.
+
+- Enter the **Account Name** by which you'd like to identify this Whois account
+  in JupiterOne. Ingested entities will have this value stored in
+  `tag.AccountName` when **Tag with Account Name** is checked.
 - Enter a **Description** that will further assist your team when identifying
-   the integration instance.
+  the integration instance.
 - Select a **Polling Interval** that you feel is sufficient for your monitoring
-   needs. You may leave this as `DISABLED` and manually execute the integration.
+  needs. You may leave this as `DISABLED` and manually execute the integration.
 - Enter the **Domains** as a comma separated list that JupiterOne will lookup.
+
 4. Click **Create Configuration** once all values are provided.
 
 ## How to Uninstall
