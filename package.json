@@ -2,6 +2,10 @@
   "name": "@jupiterone/graph-whois",
   "version": "0.5.0",
   "description": "A JupiterOne managed integration for WHOIS data",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JupiterOne/graph-whois"
+  },
   "license": "MPL-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
