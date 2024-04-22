@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createDomainEntity should convert to entity 1`] = `
+{
+  "_class": [
+    "Domain",
+  ],
+  "_key": "internet_domain_google.com",
+  "_rawData": [
+    {
+      "name": "default",
+      "rawData": {
+        "contact": {
+          "admin": {},
+          "billing": {},
+          "registrant": {},
+          "technical": {},
+        },
+        "creation_date": "1997-09-15T04:00:00Z",
+        "emails": "abusecomplaints@markmonitor.com",
+        "expiration_date": "2028-09-14T04:00:00Z",
+        "id": "2138514_DOMAIN_COM-VRSN",
+        "name": "google.com",
+        "nameservers": "NS4.GOOGLE.COM",
+        "registrar": "MarkMonitor Inc.",
+        "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+        "updated_date": "2019-09-09T15:39:04Z",
+        "whois_server": "whois.markmonitor.com",
+      },
+    },
+  ],
+  "_type": "internet_domain",
+  "active": undefined,
+  "contactEmails": [
+    "abusecomplaints@markmonitor.com",
+  ],
+  "createdOn": 874296000000,
+  "displayName": "google.com",
+  "domainName": "google.com",
+  "expiresOn": 1852516800000,
+  "id": "2138514_DOMAIN_COM-VRSN",
+  "name": "google.com",
+  "nameservers": [
+    "NS4.GOOGLE.COM",
+  ],
+  "registrar": "MarkMonitor Inc.",
+  "status": "serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited",
+  "updatedOn": 1568043544000,
+  "whoisServer": "whois.markmonitor.com",
+}
+`;

@@ -3,25 +3,20 @@ on: [push, pull_request]
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: [14.x]
-        os: [ubuntu-latest]
-
+    runs-on: ubuntu-latest
     steps:
+      - name: Check out code repository source code
+        uses: actions/checkout@v3
+
       - id: setup-node
         name: Setup Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Check out code repository source code
-        uses: actions/checkout@v2
+          node-version: 18.x
+          cache: yarn
 
       - name: Install dependencies
-        run: yarn
+        run: yarn --frozen-lockfile
 
       - name: Run tests
         run: yarn test:ci
@@ -38,13 +33,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [14]
+        node: [18]
 
     steps:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: 18.x
 
       - name: Check out repo
         uses: actions/checkout@v2
