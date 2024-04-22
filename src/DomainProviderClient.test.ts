@@ -1,8 +1,7 @@
 import DomainProviderClient, { Domain } from './DomainProviderClient';
 import { createMockIntegrationLogger } from '@jupiterone/integration-sdk-testing';
 import { WhoisLookupDomain } from './types';
-
-const whois = require('whois-api');
+import whois from 'whois-api';
 
 function getMockDomainProperties() {
   const domainProperties: WhoisLookupDomain = {
@@ -144,7 +143,8 @@ describe('fetchDomainDetails', () => {
 
     expect(listDomainsWarnFn).toHaveBeenCalledTimes(1);
     expect(listDomainsWarnFn).toHaveBeenCalledWith({
-      name: 'list_domains_warn',
+      name: 'warn_incomplete_data',
+      level: 'warn',
       description: `Partial domain list failure (count=${
         expectedDomainsFailed.length
       }, domains=${expectedDomainsFailed.join(', ')})`,

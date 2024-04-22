@@ -1,11 +1,11 @@
-import { validateInvocation } from './index';
+import { validateInvocation } from './config';
 import { createMockExecutionContext } from '@jupiterone/integration-sdk-testing';
 
 test('should allow with valid domains as an array', async () => {
   await validateInvocation(
     createMockExecutionContext({
       instanceConfig: {
-        domains: (['test.com ', 'test1.com'] as unknown) as string,
+        domains: ['test.com ', 'test1.com'] as unknown as string,
       },
     }),
   );

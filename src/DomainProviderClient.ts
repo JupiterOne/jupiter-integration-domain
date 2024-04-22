@@ -1,9 +1,11 @@
 import { retry } from '@lifeomic/attempt';
-import { IntegrationLogger } from '@jupiterone/integration-sdk-core';
+import {
+  IntegrationLogger,
+  IntegrationWarnEventName,
+} from '@jupiterone/integration-sdk-core';
 import pMap from 'p-map';
 import { WhoisLookupDomain } from './types';
-
-const whois = require('whois-api');
+import whois from 'whois-api';
 
 export interface Domain extends WhoisLookupDomain {
   name: string;
@@ -82,8 +84,8 @@ export default class DomainProviderClient {
         'Partial domain list failure',
       );
 
-      this.logger.publishEvent({
-        name: 'list_domains_warn',
+      this.logger.publishWarnEvent({
+        name: IntegrationWarnEventName.IncompleteData,
         description: `Partial domain list failure (count=${
           domainsFailed.length
         }, domains=${domainsFailed.join(', ')})`,
