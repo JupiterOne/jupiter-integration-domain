@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 0.5.1 - 2024-04-22
+
+### Changed
+
+- Upgrade node version to 18
+- Refactor code to use new patterns
+
 ## 0.5.0 - 2021-07-12
 
 ### Changed
