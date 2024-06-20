@@ -1,4 +1,4 @@
-# Integration with JupiterOne
+# Whois
 
 ## Whois + JupiterOne Integration Benefits
 
